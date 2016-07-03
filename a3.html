@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- title of the webpage -->
+	<title>front end of a3</title>
+	<meta name="author" content="Jing Wang">
+	<meta name="description" content="a3 of csc309">
+	<meta charset="utf-8">
+	<!-- JQuery should be first -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> 
+	<!-- front-end css and js files -->
+	<link rel="stylesheet" type='text/css' href='a3.css'>
+	<script type="text/javascript" src="client.js" ></script>
+</head>
+<body>
+	<!-- header of webpage-->
+	<header>
+		<h1>New York Times</h1>
+	</header>
+	<main>
+			<!-- description of webpage-->
+			<section class="frame">
+			<p>Restful API for providing access to top articles movie and book reviews of New York Times.</p>
+			</section>
+			<!-- controller for showing instruction-->
+			<section id="flip" class="frame">Click to show instructions</section>
+			<!-- instruction showing how to use it-->
+			<section id="instruction" class="frame">
+				<ul>
+					<li>Button one: Get all articles displayed in basic text format.</li>
+					<li>Button two: Get a list of all known authors from all articles.</li>
+					<li>Button three: Get a list of all article short URLs.</li>
+					<li>Button four: Get a list of tags from the des_facet field.</li>
+					<li>Button five: Get the details of a given article (starting with 0).</li>
+					<li>Button six: Get all articles displayed as hyperlinked images.</li>
+					<li>Button seven: Change text color and font.</li>
+				</ul>
+			</section>
+
+			<section id="content" class="frame">
+				<!-- area for showing retrieved data-->
+				<section id="displayed_data">
+					<table id="tb_articles" class="tb" ></table>
+					<ul id="ul_authors"></ul>
+					<section id="urls"></section>
+					<section id="ul_tags"></section>
+					<table id="tb_one_article" class="tb"></table>
+					<section id='imgs'></section>
+				</section>
+				<!-- area for showing btns-->
+				<section id="controller">
+					<button id="btn_one" class="btn"> Get articles</button><br>
+					<button id="btn_two" class="btn"> Get authors</button><br>
+					<button id="btn_three" class="btn"> Get URLs</button><br>
+					<button id="btn_four" class="btn"> Get tags</button>
+					<br>
+					<input id="article_num" type="text" name="Article number:" value="" size="3">
+					<button id="btn_five" class="btn"> Get article</button><br>
+					<button id="btn_six" class="btn"> Get imgs</button><br>
+					<p id="text_color">Text color and font:</p>
+					<select>
+					  <option value="black">black</option>
+					  <option value="brown">brown</option>
+					  <option value="red">red</option>
+					  <option value="blue">blue</option>
+					  <option value="yellow">yellow</option>
+					  <option value="green">green</option>
+					</select>
+
+					<select id="tf"> 
+					  <option value="serif">serif</option>
+					  <option value="Arial">Arial</option>
+					  <option value="cursive">cursive</option>
+					  <option value="fantasy">fantasy</option>
+					  <option value="monospace">monospace</option>
+					</select>
+					<br>
+					<button id="btn_seven" class="btn">Change text</button>
+				</section>
+			</section>
+	</main>
+
+</body>
+</html>
